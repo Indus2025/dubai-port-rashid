@@ -1,0 +1,493 @@
+/* Global Styles */
+.body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.form-label {
+    color: #333;
+}
+
+.form-check-label {
+    color: #333;
+}
+
+/* Header */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 50px;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header.scrolled {
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 50px;
+}
+
+.header .logo img {
+    height: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header.scrolled .logo img {
+    /* filter: invert(1); */
+}
+
+.btn-custom {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header.scrolled .btn-custom {
+    background: black;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    opacity: 0.9;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('https://p4.wallpaperbetter.com/wallpaper/67/283/725/night-lights-in-dubai-wallpaper-preview.jpg') no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h6 {
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-form {
+    background: #fff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 420px;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+@media (min-width: 992px) {
+    .hero-form {
+        position: absolute;
+        right: 5%;
+        top: 15%;
+        margin-top: 0;
+    }
+}
+
+.hero-form h5 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.hero-form .form-control {
+    height: 52px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-size: 0.875rem;
+}
+
+.btn-submit {
+    height: 52px;
+    font-size: 1rem;
+    font-weight: 700;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #333;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    font-size: 0.875rem;
+    padding: 12px 15px;
+}
+
+/* About Section */
+.about-section h6 {
+    letter-spacing: 2px;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.about-section p {
+    font-size: 1rem;
+}
+
+/* Trending Properties (Cards) */
+
+/* Trending Properties Section */
+.trending-properties {
+    padding: 50px 0;
+}
+
+.trending-properties h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-hover {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-bg {
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 40%,
+            rgba(0, 0, 0, 0.6) 100%);
+}
+
+.register-button {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-hover:hover .register-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Feature Grid Section */
+.feature-section {
+    background: #f8f8f8;
+    padding: 80px 0;
+}
+
+.feature-section h2 {
+    font-size: 2.5rem;
+}
+
+.feature-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-box:hover {
+    background: #fff8ec;
+}
+
+.feature-box i {
+    font-size: 2rem;
+    color: #c6a15b;
+}
+
+.feature-box h5 {
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 0.95rem;
+}
+
+/* WHY EMAAR SECTION */
+.why-emaar {
+    background: #ffffff;
+    padding: 60px 0;
+}
+
+.why-emaar h6 {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.why-emaar h2 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+}
+
+.why-emaar p {
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-bottom: 2rem;
+}
+
+.stat-box {
+    background: #fff8ec;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.why-emaar i {
+    font-size: 2rem;
+    color: #c6a15b;
+}
+
+.why-emaar h5 {
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* DUBAI MAP SECTION */
+.dubai-map-section {
+    background: #f8f8f8;
+    padding: 60px 0;
+}
+
+.dubai-map-section h6 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dubai-map-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.dubai-map img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer-bar {
+    background: #f8f8f8;
+    border-top: 1px solid #ddd;
+}
+
+.footer-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.footer-link {
+    color: #6c757d;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .header {
+        position: relative;
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center !important;
+        /* Center logo horizontally */
+    }
+
+    .header.scrolled {
+        position: fixed;
+    }
+
+    .btn-custom {
+        position: fixed !important;
+        bottom: 20px;
+        /* Instead of right:20px, we make it almost full width: */
+        left: 10px;
+        right: 10px;
+
+        /* Make it bigger and more rectangular: */
+        height: auto !important;
+        padding: 15px !important;
+        font-size: 16px !important;
+        border-radius: 6px !important;
+
+        background: #000 !important;
+        color: #fff !important;
+        z-index: 9999;
+        border: none !important;
+        /* Remove or reduce margin if desired; 
+         but typically 0 ensures it spans nearly edge-to-edge. */
+        margin: 0;
+        text-align: center;
+
+    }
+
+    .hero-section {
+        /* Already set this if you like: */
+        min-height: 10vh !important;
+        max-height: 60vh !important;
+        /* Ensure flex layout and center vertically/horizontally: */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        /* If you prefer more “breathing room” around the text, 
+       use some top/bottom padding (optional): */
+        
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h6,
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .hero-form {
+        max-width: 100%;
+    }
+
+    .about-section .row {
+        text-align: center;
+    }
+
+    .about-section .col-lg-7,
+    .about-section .col-lg-5 {
+        margin-bottom: 1rem;
+    }
+
+    .feature-section {
+        padding: 40px 0;
+    }
+
+    .feature-section h2 {
+        font-size: 2rem;
+    }
+
+    .feature-box {
+        padding: 20px;
+    }
+
+    .why-emaar {
+        padding: 40px 0;
+    }
+
+    .why-emaar h2 {
+        font-size: 2rem;
+    }
+
+    .why-emaar p {
+        font-size: 0.95rem;
+    }
+
+    .stat-box {
+        padding: 15px;
+    }
+
+    .dubai-map-section {
+        padding: 40px 0;
+    }
+
+    .dubai-map-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .iti--allow-dropdown input,
+    .iti--allow-dropdown input[type=text],
+    .iti--allow-dropdown input[type=tel],
+    .iti--separate-dial-code input,
+    .iti--separate-dial-code input[type=text],
+    .iti--separate-dial-code input[type=tel] {
+        width: 266px !important;
+    }
+}
+
+/* Adjust intl-tel-input widths */
+.iti--separate-dial-code.iti--show-flags .iti__selected-dial-code {
+    margin-left: 6px;
+    color: #333;
+}
+
+.iti__country-name {
+    margin-right: 6px;
+    color: #333;
+}
+
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=text],
+.iti--allow-dropdown input[type=tel],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type=text],
+.iti--separate-dial-code input[type=tel] {
+    width: 350px;
+}
